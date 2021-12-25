@@ -20,12 +20,12 @@ const SignIn = () => {
     return (
         <div>
             <NavigationBar />
-            <div className="container mt-5 pt-5">
-                <div className="row d-flex align-items-center">
+            <div className="container pt-5" style={{ minHeight: "620px" }}>
+                <div className="row d-flex align-items-center justify-content-center">
                     <div className="col-md-7 animate__animated animate__backInLeft">
-                        <img src={loginImg} alt="" className="img-fluid" />
+                        <img src={loginImg} alt="" className="img-fluid w-75" />
                     </div>
-                    <div className="col-md-5 text-center mt-3 animate__animated animate__backInRight">
+                    <div className="col-md-5 text-center mt-5 animate__animated animate__backInRight">
                         <div className="mx-auto shadow-lg py-4 rounded-3">
                             <img src={logo} alt="" className="w-25" />
                             <h4 className="my-3 text-uppercase purple-text">Explore More By Sign in</h4>

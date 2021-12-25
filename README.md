@@ -1,3 +1,5 @@
+### Admin Email: tanmoyparvez@gmail.com Pass: 123456
+
 # Shop More Dot Com
 
 ## Description:

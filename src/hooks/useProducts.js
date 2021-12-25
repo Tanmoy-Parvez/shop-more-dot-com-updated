@@ -15,7 +15,7 @@ const useProducts = () => {
             .catch(err => {
                 console.log("Error", err.message);
             })
-        dispatch(setProducts(response.data));
+        dispatch(setProducts(response?.data));
     }
 
     const reload = () => {

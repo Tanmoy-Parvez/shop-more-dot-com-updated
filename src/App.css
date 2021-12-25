@@ -1,21 +1,21 @@
 .regular-btn {
-  background-color: #ffc107;
+  background-color: #3cbf96;
   color: #fff;
   padding: 0px 30px;
 }
 
 .banner-bg {
-  background-color: #f5e4b3;
+  background-color: #e3eeea;
 }
 
 .purple-bg {
-  background-color: #ffc107;
+  background-color: #3cbf96;
 }
 .dark-purple-bg {
-  background-color: #ffc107;
+  background-color: #0fa072;
 }
 .purple-text {
-  color: #ffc107;
+  color: #3cbf96;
 }
 
 .nav-items a {
@@ -24,11 +24,36 @@
 }
 
 .nav-items a:hover {
-  color: #b66305;
+  color: #057954;
 }
 
 .menu-list li {
   list-style: none;
   margin-top: 10px;
   font-size: 18px;
+}
+.menu-item a {
+  text-decoration: none;
+  color: #3cbf96;
+}
+
+.menu-item a:hover {
+  color: #057954;
+}
+
+.service-card {
+  background-color: rgba(241, 236, 236, 0.486);
+}
+
+.service-card:hover {
+  cursor: pointer;
+  background-color: rgb(238, 231, 231);
+}
+
+.hashLink {
+  color: white !important;
+}
+
+.hashLink:hover {
+  color: #057954 !important;
 }

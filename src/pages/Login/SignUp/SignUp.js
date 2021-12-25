@@ -29,10 +29,10 @@ const SignUp = () => {
     return (
         <div>
             <NavigationBar />
-            <div className="container my-4 pt-5">
+            <div className="container pt-5">
                 <div className="row d-flex align-items-center">
                     <div className="col-md-7 animate__animated animate__backInRight">
-                        <img src={loginImg} alt="" className="img-fluid" />
+                        <img src={loginImg} alt="" className="w-100 mx-auto" />
                     </div>
                     <div className="col-md-5 text-center animate__animated animate__backInLeft">
                         <div className="rounded-3 mx-auto shadow-lg py-4 mt-2">

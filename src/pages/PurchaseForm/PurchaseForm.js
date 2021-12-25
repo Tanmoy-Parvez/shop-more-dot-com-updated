@@ -35,33 +35,32 @@ const PurchaseForm = () => {
     };
 
     return (
-        <div className="container my-5 pt-3">
+        <div className="my-5 pt-3 text-center">
             <NavigationBar />
-            <div className="row d-flex align-items-center g-4">
-                <div className="col-md-6 text-center">
-                    <Card className="px-2 py-4 border-0 shadow-lg banner-bg">
-                        <Card.Img variant="top" src={product?.img} className="p-2 img-fluid w-75 mx-auto" />
-                        <Card.Body className="text-uppercase text-center">
-                            <Card.Title>
-                                <h4 className="purple-text">{product?.name}</h4>
-                            </Card.Title>
-                            <Card.Text className="text-secondary">
-                                <h6>Category: {product?.category} <span className="ms-5">Available: {product?.stock}</span> </h6>
-                            </Card.Text>
-                            <Card.Text className="text-secondary">
-                                <h6>Ratings: {product?.star}/5 <span className="ms-5">Total ratings: {product?.starCount}</span> </h6>
+            <div className="row">
+                <div className="col-md-3"></div>
+                <div className="col-md-6">
+                    <Card className="bg-dark text-white border-0">
+                        <Card.Img src={product?.img} alt="Card image" className="w-100" height="400px" style={{ opacity: 0.5 }} />
+                        <Card.ImgOverlay className="text-white ">
+                            <Card.Title className="fs-2 mt-5">{product?.name}</Card.Title>
+                            <Card.Text>
+                                <h4>Category: {product?.category} <span className="ms-5">Available: {product?.stock}</span> </h4>
                             </Card.Text>
                             <Card.Text>
-                                <h4 className="purple-text fs-5">Price: ${product?.price} Only</h4>
+                                <h4>Ratings: {product?.star}/5 <span className="ms-5">Total ratings: {product?.starCount}</span> </h4>
                             </Card.Text>
-                            <h5 className="text-white mt-4 purple-bg py-2">Please Fill the order now form</h5>
-                        </Card.Body>
+                            <Card.Text>
+                                <h2>Price: ${product?.price}</h2>
+                            </Card.Text>
+                        </Card.ImgOverlay>
                     </Card>
-                    <Link to="/allProducts">
-                        <button className="btn regular-btn py-2 mt-4">Purchase More</button>
-                    </Link>
                 </div>
-                <div className="col-md-6 text-center mt-5">
+                <div className="col-md-3"></div>
+            </div>
+            <div className="row">
+                <div className="col-md-3"></div>
+                <div className="col-md-6 text-center">
                     <div className="py-5 border rounded-3 mx-auto shadow-lg animate__animated animate__backInDown">
                         <img src={logo} alt="" className="w-25" />
                         <h3 className="my-3 text-uppercase purple-text">Order Now Form</h3>
@@ -108,7 +107,11 @@ const PurchaseForm = () => {
                         </form>
                     </div>
                 </div>
+                <div className="col-md-3"></div>
             </div>
+            <Link to="/allProducts">
+                <button className="btn regular-btn py-2 mt-4">Purchase More</button>
+            </Link>
         </div>
     );
 };

@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/logo2.png'
 
 const NavigationBar = () => {
     const { user, logOut } = useAuth()
     return (
-        <Navbar collapseOnSelect expand="lg" fixed="top" className="bg-warning" variant="dark">
+        <Navbar collapseOnSelect expand="lg" fixed="top" className="bg-dark" variant="dark">
             <Container>
                 <Navbar.Brand href="#home">
                     <img
@@ -17,7 +18,7 @@ const NavigationBar = () => {
                         height="30"
                         className="d-inline-block align-top "
                     />{' '}
-                    <span className="text-dark fw-bold">SHOP MORE.COM</span>
+                    <span className="text-white fw-bold">SHOP MORE.COM</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -26,9 +27,20 @@ const NavigationBar = () => {
                             <Link to="/home">Home</Link>
                         </Nav.Link>
                         <Nav.Link>
-                            <Link to="/allProducts">Explore</Link>
+                            <Link to="/allProducts">products</Link>
                         </Nav.Link>
-
+                        <Nav.Link as={NavHashLink} to="/home#services" className="hashLink">
+                            Services
+                        </Nav.Link>
+                        <Nav.Link as={NavHashLink} to="/home#reviews" className="hashLink">
+                            Reviews
+                        </Nav.Link>
+                        <Nav.Link as={NavHashLink} to="/home#about" className="hashLink">
+                            About
+                        </Nav.Link>
+                        <Nav.Link as={NavHashLink} to="/home#blogs" className="hashLink">
+                            Blogs
+                        </Nav.Link>
                         {!user?.email ? <Nav.Link>
                             <Link to="/signIn">Login</Link>
                         </Nav.Link>

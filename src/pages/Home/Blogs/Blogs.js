@@ -6,47 +6,41 @@ import blog3 from '../../../images/blog-img/blog3.jpg'
 import Zoom from 'react-reveal/Zoom';
 const Blogs = () => {
     return (
-        <div className="container text-center text-uppercase">
-            <h1 className="fw-bold">From The <span className="purple-text">Blogs</span> </h1>
-            <Row xs={1} md={3} className="my-3">
+        <div className="container text-center text-uppercase" id="blogs">
+            <h1 className="fw-bold">Latest <span className="purple-text">Blogs</span> </h1>
+            <Row xs={1} md={3} className="my-5">
                 <Zoom>
                     <Col>
-                        <Card className="border-0 py-3 ">
-                            <Card.Img variant="top" src={blog1} />
-                            <Card.Body className="banner-bg">
+                        <Card className="bg-dark border-0 text-white">
+                            <Card.Img src={blog1} alt="Card image" style={{ opacity: 0.5 }} />
+                            <Card.ImgOverlay>
+                                <Card.Title className="mt-5">Great Explore With Sunglasses</Card.Title>
                                 <Card.Text>
-                                    <h6 className="text-secondary"><i className="far fa-clock"></i> 15 September, 2020 <span><i className="fas fa-comments ms-2"></i> Comments(1)</span></h6>
+                                    <h6><i className="far fa-clock"></i> 25 October, 2021 <span><i className="fas fa-comments ms-2"></i> Comments(3)</span></h6>
                                 </Card.Text>
-                                <Card.Title>
-                                    Excepteur Occaecat Cupidatat
-                                </Card.Title>
-                            </Card.Body>
+                            </Card.ImgOverlay>
                         </Card>
                     </Col>
                     <Col>
-                        <Card className="border-0 py-3">
-                            <Card.Img variant="top" src={blog2} />
-                            <Card.Body className="banner-bg">
+                        <Card className="bg-dark border-0 text-white">
+                            <Card.Img src={blog2} alt="Card image" style={{ opacity: 0.5 }} />
+                            <Card.ImgOverlay>
+                                <Card.Title className="mt-5">Great Explore With Sunglasses</Card.Title>
                                 <Card.Text>
-                                    <h6 className="text-secondary"><i className="far fa-clock"></i> 25 October, 2021 <span><i className="fas fa-comments ms-2"></i> Comments(3)</span></h6>
+                                    <h6><i className="far fa-clock"></i> 25 October, 2021 <span><i className="fas fa-comments ms-2"></i> Comments(3)</span></h6>
                                 </Card.Text>
-                                <Card.Title >
-                                    Blend into the nature
-                                </Card.Title>
-                            </Card.Body>
+                            </Card.ImgOverlay>
                         </Card>
                     </Col>
                     <Col>
-                        <Card className="border-0 py-3">
-                            <Card.Img variant="top" src={blog3} />
-                            <Card.Body className="banner-bg">
+                        <Card className="bg-dark border-0 text-white">
+                            <Card.Img src={blog3} alt="Card image" style={{ opacity: 0.5 }} />
+                            <Card.ImgOverlay>
+                                <Card.Title className="mt-5">Great Explore With Sunglasses</Card.Title>
                                 <Card.Text>
-                                    <h6 className="text-secondary"><i className="far fa-clock"></i> 10 August, 2021 <span><i className="fas fa-comments ms-2"></i> Comments(5)</span></h6>
+                                    <h6><i className="far fa-clock"></i> 25 October, 2021 <span><i className="fas fa-comments ms-2"></i> Comments(3)</span></h6>
                                 </Card.Text>
-                                <Card.Title>
-                                    Crowdes Passges All The Way
-                                </Card.Title>
-                            </Card.Body>
+                            </Card.ImgOverlay>
                         </Card>
                     </Col>
                 </Zoom>

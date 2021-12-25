@@ -56,11 +56,12 @@ const ManageOrders = () => {
     }
     // manage all orders 
     return (
-        <div className="px-2 mb-5">
+        <div className="px-2 mb-5" style={{ minHeight: "500px" }}>
             <h5 className="purple-text text-uppercase text-center pt-2">
                 <i>All the orders are below</i>
             </h5>
-            <h3 className="text-uppercase text-warning text-center mb-4">Manage All The Ordered Products</h3>
+            <h3 className="text-uppercase text-warning text-center">Manage All The Ordered Products</h3>
+            <h5 className="text-uppercase text-warning text-center mb-4">Available Orders: {allOrders?.length}</h5>
             <div className="row">
                 {
                     allOrders.map(allOrder => <div className="col-md-4">
@@ -89,9 +90,6 @@ const ManageOrders = () => {
                     </div>
                     )
                 }
-            </div>
-            <div className="mb-5 text-center" style={{ opacity: "0.1" }}>
-                <img src={logo} />
             </div>
         </div>
     );

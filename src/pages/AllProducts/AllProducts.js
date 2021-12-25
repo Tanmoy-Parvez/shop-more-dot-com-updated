@@ -5,6 +5,7 @@ import NavigationBar from '../Shared/NavigationBar/NavigationBar';
 import { Link } from 'react-router-dom';
 import useBuy from '../../hooks/useBuy';
 import Fade from 'react-reveal/Fade';
+import Rating from 'react-rating';
 
 
 const AllProducts = () => {
@@ -16,7 +17,7 @@ const AllProducts = () => {
     }
 
     return (
-        <div className='container-fluid pb-2 mt-5 pt-5 text-center banner-bg'>
+        <div className='container-fluid pb-2 mt-5 pt-5 text-center banner-bg' style={{ minHeight: "800px" }}>
             <NavigationBar />
             <h2 className="fw-bold text-uppercase">Most Sales<span className='purple-text'> Products</span> </h2>
             {products.length ? <Row xs={1} md={3} className="gx-4 gy-5 container mx-auto text-start m-2">
@@ -27,11 +28,18 @@ const AllProducts = () => {
                                 <Card.Img variant="top" src={product?.img} className="mx-auto p-3" height="250px" />
                                 <Card.Body>
                                     <Card.Title className="text-uppercase purple-text">{product?.name.slice(0, 22)}</Card.Title>
-                                    <Card.Text className="text-secondary">
+                                    <Card.Text>
                                         <h6>Category: {product?.category} <span className="ms-5">Available: {product?.stock}</span> </h6>
                                     </Card.Text>
-                                    <Card.Text className="text-secondary">
-                                        <h6>Ratings: {product?.star}/5 <span className="ms-5">Total ratings: {product?.starCount}</span> </h6>
+                                    <Card.Text>
+                                        <h6>
+                                            <Rating
+                                                readonly
+                                                placeholderRating={product?.star}
+                                                emptySymbol={<i className="far fa-star text-warning"></i>}
+                                                placeholderSymbol={<i className="fas fa-star text-warning" />}
+                                                fullSymbol={<i className="fas fa-star text-warning" />}
+                                            /> ({product?.star}/5) <span className="ms-4">Total ratings: {product?.starCount}</span> </h6>
                                     </Card.Text>
                                     <Card.Text>
                                         <h4 className="purple-text fs-5">Price: $ {product?.price}  Only</h4>
